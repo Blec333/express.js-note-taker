@@ -39,7 +39,6 @@ router.post('/notes', (req, res) => {
 router.delete("/notes/:id", (req, res) => {
   console.info(`${req.method} request received for notes`);
   const noteId = req.params.id;
-  // console.log(noteId);
   readFromFile('./db/db.json', 'utf8')
   .then((data) => {
       notesArr = JSON.parse(data);
